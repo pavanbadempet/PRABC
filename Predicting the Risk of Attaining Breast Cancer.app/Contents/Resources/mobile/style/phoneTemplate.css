@@ -1,0 +1,522 @@
+.phoneTopBar{position : absolute;width : 100%;height : 40px;left : 0;top : 0;z-index : 99;}
+.phoneTopBar .button{width : 40px;height : 40px;position : absolute;cursor:pointer;}
+.phoneTopBar .button img{max-height : 40px;position : absolute;top:0;bottom:0;margin:auto;}
+.phoneTopBar .button .svg{max-height : 40px;position : absolute;top:0;bottom:0;margin:auto;}
+.phoneTopBar .button .icon{position : absolute;left : 10px;top : 10px;}
+.phoneTopBar .button div{width : 20px;height : 20px;}
+.phoneTopBar .button span{display:none;}
+
+.phoneBottomBar{position : absolute;width : 100%;height : 40px;bottom : 0;left : 0;z-index : 99;}
+.phoneBottomBar .button{width : 40px;height : 40px;position : absolute;cursor:pointer;}
+.phoneBottomBar .button img{height : 20px;left: -31px;width:20px;position : absolute;top:0;bottom:0;margin:auto;}
+.phoneBottomBar .button .svg{height : 20px;left: 1px;width:20px;position : absolute;top:0;bottom:0;margin:auto;}
+.phoneBottomBar .button .icon{overflow:hidden; position : absolute;left:10px;top:10px;width:22px;height:22px;}
+.phoneBottomBar .button span{display:none;}
+.phoneBottomBar .button img.custom{left:0;}
+
+.phone.extendedBar .arrow{position:absolute;width:50px;height:20px;left:50%;cursor:pointer;margin-left:-25px;border-radius:5px 5px 0 0;top:-20px;background-color:rgba(0,0,0,0.8);}
+.phone.extendedBar .arrow img{width:10px;margin:5px 20px;}
+
+.extendedBar.phone{border-bottom:1px solid rgba(255,255,255,0.1);overflow : hidden;position : absolute;bottom:-280px;z-index: 98;border-radius:0;background:#000000;width:100%;height:72px;}
+.extendedBar.phone .button{width : 40px;height : 52px;border-radius: 0;float:left;margin:10px 0 0 30px;position:relative;text-align:center;}
+.extendedBar.phone .button .icon{overflow:hidden;position:relative;display:block;width:32px;height:32px;border-radius:16px;background-color:rgba(255,255,255,0.1);margin:0 0 0 4px;}
+.extendedBar.phone .button img{left:-25px;display:block;width:18px;height:18px;position:absolute;top:7px;margin:0;}
+.extendedBar.phone .button .svg{left:7px;display:block;width:18px;height:18px;position:absolute;top:7px;margin:0;}
+.extendedBar.phone .button span{top:0;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color : white;line-height:20px;display:block;position:relative;margin:0 0 0 -15px;width:70px;}
+.extendedBar.phone .button img.custom{left:7px;}
+.extendedBar.phone .svg-box{width : 14px;height : 14px;cursor : pointer;margin: 3px 0 0 18px;}
+
+.extendedBar.phone .stage{height:100%;}
+.extendedBar.phone .stage .swiper{height:100%;}
+.extendedBar.phone .stage .swiper .item{height:100%;}
+.extendedBar.phone .stage .swiper .dots{height:20px;position:absolute;left:0;bottom:0;}
+.extendedBar.phone .stage .swiper .dots .dot{width:10px;height:10px;border-radius:5px;background:#ffffff;}
+
+.phoneGotoPageContent img{
+	/*width : 22px;*/
+	/*height : 22px;*/
+	cursor : pointer;
+	margin: 4px -2px 4px 0;
+}
+
+.phoneGotoPageContent .inputButton{
+	display : inline-block;
+	position : relative;
+	overflow : visible;
+	top : 0;
+	margin-left : 7px;
+	width : 25px;
+	height : 30px;
+	cursor : pointer;
+	/*border:1px solid rgba(255,255,255,0.1);*/
+}
+
+.phoneGotoPageContent .goBtn div{
+	width : 20px;
+	height : 20px;
+	margin:4px;
+}
+
+.phoneGotoPageContent .btn{
+	display : inline-block;
+	position : relative;
+	overflow : visible;
+	top : -5px;
+	margin-top : 12px;
+	margin-left : 7px;
+	width : 30px;
+	height : 30px;
+	cursor : pointer;
+	/*border:1px solid rgba(255,255,255,0.1);*/
+}
+
+.phoneGotoPageContent .btn div{
+	width : 20px;
+	height : 20px;
+}
+
+.phoneGotoPageContent .svg-box{
+	margin-top:5px;
+}
+
+.phoneGotoPageContent .goBtn{
+	width : 30px;
+	height: 30px;
+    top: 0px;
+	right : 0px;
+	cursor : pointer;
+    z-index : 5;
+    position:absolute;
+}
+
+.form_mask_phone{opacity:0.5;background:#000000;z-index:9999;position:absolute;width:100%;height:100%;top:0;left:0;}
+.phone .form_title{text-align:center;vertical-align:middle;font-family:"Arial";font-size:15px;line-height:20px; padding: 0 20px;margin:0; margin: 10px 0;}
+.phone .form_title span{margin:0;line-height: 20px;padding:0;}
+.phone .close{top:8px;position:absolute;cursor:pointer;left:auto;right:13px;padding:0;margin:0;}
+.phone.rightToLeft .close{top:8px;position:absolute;cursor:pointer;right:13px;}
+
+/* .print_form_phone */
+.print_form_phone{text-align:left;vertical-align:middle;line-height:20px;position:absolute;left:0;top:0;z-index:1000;background:#000000;width:310px;padding:0;color:#ffffff;font-size:15px;font-family:Calibri;position:absolute;}
+.print_form_phone .printButton{cursor:pointer;background:rgba(255,255,255,0.25);vertical-align: middle;text-align:center;margin:10px 20px;width:auto;height:40px;line-height:40px;font-size:15px;}
+.print_form_phone .item span{margin-left:10px;vertical-align: middle;}
+
+.print_form_phone{background:transparent;width:100%;padding:0;}
+.print_form_phone{background:transparent;width:100%;padding:0;border-radius: 0;border:none;box-shadow: none;filter:none;}
+.print_form_phone .item{cursor:pointer;line-height:20px;vertical-align: middle;position:relative;padding:10px 20px 10px;margin:0 20px;border-bottom: 1px solid rgba(255,255,255,0.2);}
+.print_form_phone .item .print_icon{vertical-align: middle;position:absolute;left:10px;top:11px;width:24px;height:24px;}
+.print_form_phone.rightToLeft .item{text-align:right;}
+.print_form_phone.rightToLeft .item .print_icon{vertical-align: middle;position:absolute;right:10px;left:auto;top:11px;}
+.print_form_phone .printRange input{border-radius:0;padding:0 5px;width:100px;height:26px;border:none;margin-left:10px;font-size:12px;background-color:#D3D3D3; }
+.print_form_phone.rightToLeft .printRange input{margin-left:0;margin-right:10px;}
+.print_form_phone .item span{margin-left:20px;}
+.print_form_phone.rightToLeft .item span{margin:0 20px 0 0}
+
+/* bookmark_form_phone */
+.bookmark_form_phone{text-align:left;vertical-align:middle;line-height:20px;position:absolute;display:block;z-index:1000;left:-350px;top:157px;width:250px;height:425px;background:#000000;padding:0;color:#ffffff;font-size:15px;font-family:Calibri;}
+.bookmark_form_phone .inputForm{width:100%;margin-top:10px;height:30px;position:relative;}
+.bookmark_form_phone .input_title{width:192px;height:30px;border:none;padding:0 10px;position:absolute;left:0;}
+.bookmark_form_phone .colorSelection{width:28px;height:28px;border:1px solid #ffffff;position:absolute;right:0;}
+.bookmark_form_phone .add_page{display:inline-block;vertical-align:middle;text-align:center;cursor:pointer;width:120px;height:30px;line-height:30px;margin-top:10px;background:rgba(255,255,255,0.25);}
+.bookmark_form_phone .add_page.left{margin-right:10px;}
+.bookmark_form_phone .list_title{cursor:default;font-size:15px;height:30px;width:100%;margin-top:10px;background:rgba(255,255,255,0.1);line-height:30px;vertical-align:middle;text-align:left;}
+.bookmark_form_phone .list_title span{padding:0 10px;display:inline-block;}
+.bookmark_form_phone .list_title .page{border-right:1px solid rgba(255,255,255,0.1);width:30px;}
+.bookmark_form_phone .list_title .description{width:108px;border-right:1px solid rgba(255,255,255,0.1);}
+.bookmark_form_phone .list_title .edit{}
+
+.bookmark_form_phone .stage{overflow:hidden;width:100%;position:relative;}
+.bookmark_form_phone .swiper{width:100%;left:0;top:0;}
+
+.bookmark_form_phone .progress{width:15px;height:5px;position:absolute;bottom:0;right:0;cursor:pointer;}
+.bookmark_form_phone .progressBar{width:5px;height:5px;background:rgba(255,255,255,0.25);position:absolute;right:0;top:0;cursor:pointer;border-radius:2px;}
+
+.bookmark_form_phone .removeAll{width:100%;height:30px;line-height:30px;background:rgba(255,255,255,0.25);margin-top:5px;cursor:pointer;vertical-align:middle;text-align:center;display:none;}
+
+.bookmark_form_phone .item{width:100%;height:30px;line-height:30px;vertical-align:middle;text-align:left;position:relative;margin-top:0;}
+.bookmark_form_phone .item span{padding:0 10px;display:inline-block;}
+.bookmark_form_phone .item input{display:inline-block;}
+.bookmark_form_phone .item .page{width:30px;}
+.bookmark_form_phone .item .title{width:82px;height:20px;border:none;padding:0 10px;background:transparent;}
+.bookmark_form_phone .item .colorSelection{margin:0;width:20px;height:18px;position:absolute;left:130px;top:6px;display:none;}
+.bookmark_form_phone .item img{position:absolute;cursor:pointer;}
+.bookmark_form_phone .item .save{left:160px;top:7px;display:none;}
+.bookmark_form_phone .item .cancel{left:190px;top:7px;display:none;}
+.bookmark_form_phone .item .edit{left:190px;top:7px;}
+.bookmark_form_phone .item .delete{left:214px;top:7px;}
+
+.bookmark_form_phone.rightToLeft{text-align:right;}
+.bookmark_form_phone.rightToLeft .input_title{left:auto;right:0;direction:rtl;}
+.bookmark_form_phone.rightToLeft .colorSelection{right:auto;left:0;}
+.bookmark_form_phone.rightToLeft .add_page.left{margin-left:10px;margin-right:0;}
+.bookmark_form_phone.rightToLeft .list_title{text-align:right;}
+.bookmark_form_phone.rightToLeft .list_title .page{border-left:1px solid rgba(255,255,255,0.1);border-right:none;width:30px;}
+.bookmark_form_phone.rightToLeft .list_title .description{border-left:1px solid rgba(255,255,255,0.1);border-right:none;}
+.bookmark_form_phone.rightToLeft .list_title .edit{}
+.bookmark_form_phone.rightToLeft .progress{left:0;right:auto;}
+.bookmark_form_phone.rightToLeft .progressBar{left:0;right:auto;}
+
+.bookmark_form_phone{background:transparent;width:100%;height:100%;padding:0;left:0;top:0;margin:0;}
+.bookmark_form_phone .stage{margin:0;width:100%;height:100%;}
+.bookmark_form_phone .item{position:relative;width:100%;height:100px;line-height:100px;vertical-align:middle;font-size:15px;cursor:pointer;}
+.bookmark_form_phone .item span{margin:0 10px;float:left;display:inline-block;width:auto;}
+.bookmark_form_phone .item img{height:76px;float:left;margin:12px 0;position:relative;}
+.bookmark_form_phone .item .delete{position:absolute;cursor:pointer;top:30px;left:auto;right:10px;width:41px;height:41px;background-position:-402px -429px;background-image: url(phoneIcon/phone_icon.png);background-repeat: no-repeat;}
+.bookmark_form_phone .item .delete:hover{background-position:-462px -429px;}
+.bookmark_form_phone{background:transparent;width:100%;height:100%;padding:0;left:0;top:0;margin:0;border-radius: 0;border:none;box-shadow: none;filter:none;
+-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
+.bookmark_form_phone .stage{margin:0;width:100%;height:100%;}
+.bookmark_form_phone .item{position:relative;width:100%;height:100px;line-height:100px;vertical-align:middle;font-size:15px;cursor:pointer;}
+.bookmark_form_phone .item span{margin:0 10px;float:left;display:inline-block;width:auto;}
+.bookmark_form_phone .item img{height:76px;float:left;margin:12px 0;position:relative;}
+.bookmark_form_phone.rightToLeft .item img{float:right;}
+.bookmark_form_phone.rightToLeft .item span{float:right;}
+.bookmark_form_phone.rightToLeft .item .delete{left:20px;right:auto;}
+.bookmark_form_phone .item .delete{position:absolute;cursor:pointer;top:30px;left:auto;right:20px;width:41px;height:41px;background-position:-402px -429px;background-image: url(phoneIcon/phone_icon.png);background-repeat: no-repeat;}
+.bookmark_form_phone .item .delete:hover{background-position:-462px -429px;}
+
+/* search_form_phone */
+.search_form_phone{text-align:left;vertical-align:middle;line-height:20px;position:absolute;z-index:1000;left:-300px;top:0;width:250px;height:548px;background:#000000;
+  padding:0;color:#ffffff;font-size:15px;font-family:Calibri;position:absolute;}
+.search_form_phone .result{margin-top:10px;}
+
+.search_form_phone .stage{overflow:hidden;width:250px;height:460px;position:relative;margin:10px 0 0 0;}
+.search_form_phone .swiper{width:100%;position:absolute;left:0;top:0;}
+
+.search_form_phone .progress{width:15px;height:5px;position:absolute;bottom:0;right:0;cursor:pointer;}
+.search_form_phone .progressBar{width:5px;height:5px;opacity:0.25;background:#ffffff;position:absolute;right:0;top:0;cursor:pointer;border-radius:2px;}
+
+.search_form_phone .item{padding:10px 20px;cursor:pointer;}
+.search_form_phone .item .description{font-size:15px;margin-top:3px;opacity:0.6;}
+.search_form_phone .item:hover{background:rgba(255,255,255,0.25);}
+
+.search_form_phone.rightToLeft{text-align:right;}
+.search_form_phone.rightToLeft .progress{left:0;right:auto;}
+.search_form_phone.rightToLeft .progressBar{left:0;right:auto;}
+
+.search_form_phone{border-top:1px solid rgba(255,255,255,0.25);width:100%;height:100%;padding:0;left:0;top:0;background:transparent;}
+.search_form_phone .stage{width:100%;position:relative;margin:0;}
+.search_form_phone{border-top:1px solid rgba(255,255,255,0.25);width:100%;height:100%;padding:0;left:0;top:0;background:transparent;border-radius:0;border:none;box-shadow: none;filter:none;
+-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
+.search_form_phone .result{margin:0;height:35px;line-height:35px;background:rgba(255,255,255,0.05);padding:0 20px;}
+.search_form_phone .stage{width:100%;position:relative;margin:0;}
+
+/* tableofcontent_form_phone */
+.tableofcontent_form_phone{text-align:left;vertical-align:middle;line-height:20px;position:absolute;z-index:1000;left:-300px;top:150px;width:250px;height:548px;background:#000000;padding:0;color:#ffffff;font-size:15px;font-family:Calibri;}
+
+.tableofcontent_form_phone .swiper{width:100%;position:absolute;left:0;top:0;}
+
+.tableofcontent_form_phone .progress{width:15px;height:5px;position:absolute;bottom:0;right:0;cursor:pointer;}
+.tableofcontent_form_phone .progressBar{width:5px;height:5px;background:rgba(255,255,255,0.25);position:absolute;right:0;top:0;cursor:pointer;border-radius:2px;}
+
+.tableofcontent_form_phone .item{font-size:15px;cursor:pointer;position:relative;margin-right:0;margin-left:0;line-height: 40px;padding-left:10px;}
+.tableofcontent_form_phone .item .arrow{padding:10px 10px 10px 0;position:absolute;top:0;}
+.tableofcontent_form_phone .item .description{display:inline-block;}
+.tableofcontent_form_phone .item:hover{background:rgba(255,255,255,0.1);}
+
+.tableofcontent_form_phone.rightToLeft{text-align:right;}
+.tableofcontent_form_phone.rightToLeft .item{margin-right:0;margin-left:0;}
+.tableofcontent_form_phone.rightToLeft .item .arrow{padding:10px 0 10px 10px;}
+.tableofcontent_form_phone.rightToLeft .progress{left:0;right:auto;}
+.tableofcontent_form_phone.rightToLeft .progressBar{left:0;right:auto;}
+
+.tableofcontent_form_phone{background:transparent;width:100%;height:100%;padding:0;left:0;top:0;margin:0;}
+.tableofcontent_form_phone{background:transparent;width:100%;height:100%;padding:0;left:0;top:0;margin:0;border-radius:0;border:none;box-shadow: none;filter:none;}
+.tableofcontent_form_phone .stage{position:relative;margin:0 20px;}
+
+.phone .searchButton{position:absolute;top:61px;right:20px;cursor:pointer;z-index:10;max-width:25px;max-height:25px;transform: translate(0, -50%);}
+.phone .input_search{background-color:#fff;border-radius:5px;margin:0 20px;height:40px;line-height:40px;padding:0 25px 0 10px;width:275px;border:1px solid transparent;}
+.phone.rightToLeft .searchButton{left:20px;right:0;}
+.phone.rightToLeft .input_search{padding:0 10px 0 25px;}
+
+/* about form */
+.about_form_phone{vertical-align:middle;line-height:20px;text-align:center;width:100%;height:auto;padding:0;color:#ffffff;font-size:15px;font-family:Calibri;position:absolute;}
+.about_form_phone .content_title{border:1px solid transparent;top:51px;cursor:pointer;width:105px;height:34px;position:absolute;line-height:34px;vertical-align:middle;text-align:center;}
+.about_form_phone .contact_title{left:51%;}
+.about_form_phone .description_title{right:51%;}
+.about_form_phone .focus{background:rgba(255,255,255,0.25);}
+.about_form_phone .content{margin:0 0 0 65px; width: auto;}
+.about_form_phone .content1{display:none;height:220px;overflow:auto;}
+.about_form_phone .content2{height:220px;overflow:hidden;position: relative;}
+.about_form_phone .description{text-align:left;border-top: 1px solid rgba(255,255,255,0.2);}
+.about_form_phone .item{position:relative;min-height:18px;text-align:left;cursor:pointer;margin:0;vertical-align: middle;padding:10px 20px 10px;border-bottom: 1px solid rgba(255,255,255,0.2);}
+.about_form_phone .item .title{display:inline-block;position:absolute;left:20px;top:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:70px;}
+.about_form_phone .content2 .item .content{margin:0;width:auto;}
+.about_form_phone .content1 .item .content{margin:0 0 0 80px;width:auto;}
+.about_form_phone .content1 .item{height:34px;line-height:34px;}
+.about_form_phone a{text-decoration:underline;}
+.about_form_phone .aboutLogo{width: 300px;height: 70px;margin:0 20px; display: inline-block;}
+
+.about_form_phone .swiper{width:98%;position:absolute;left:0;top:0;}
+.about_form_phone .progress{width:15px;height:5px;position:absolute;bottom:0;right:0;cursor:pointer;}
+.about_form_phone .progressBar{width:5px;height:5px;background:rgba(255,255,255,0.25);position:absolute;right:0;top:0;cursor:pointer;border-radius:2px;}
+
+.about_form_phone.rightToLeft{text-align:right;}
+.about_form_phone.rightToLeft .item .title{left:auto;right:20px;}
+.about_form_phone.rightToLeft a{float: right;}
+.about_form_phone.rightToLeft a.aboutLogo{float: inherit;}
+.about_form_phone.rightToLeft .content2 .item .content{margin:0;text-align:right;}
+.about_form_phone.rightToLeft .content1 .item .content{margin:0 80px 0 0;text-align:right;}
+.about_form_phone.rightToLeft .item .title{text-align:right;}
+.about_form_phone .description.item .content {margin: 0px;}
+.about_form_phone.rightToLeft .content {margin:0 65px 0 0;}
+.about_form_phone.rightToLeft .item{text-align: right;}
+
+/* share_form_phone */
+.share_form_phone{border-radius: 0;border:none;box-shadow: none;filter:none;}
+.share_form_phone .item .logo{width:40px;height:40px;margin:0 auto;display:block;float: none;}
+.share_form_phone .item .logo_title{line-height: 30px;}
+.share_form_phone .item .logo div{width:40px;height:40px;}
+.share_form_phone .copy{width:74%;height:30px;line-height:30px;cursor:pointer;background:rgba(255,255,255,0.4);color:#fff;position:absolute;top:320px;left:12%;right:auto;vertical-align:middle;text-align:center;}
+
+.share_form_phone{padding:0;top:auto;border-radius: 10px 10px 0 0;border:none;box-shadow: none;filter:none;}
+
+.share_form_phone .form_title{text-align:center;top:0;left:0;text-align:center;vertical-align:middle;border-bottom:1px solid rgba(255,255,255,0.2);background:transparent; width:100%;font-family:"Arial";font-size:15px;line-height:40px;position: relative;margin:0;height:40px;padding: 0;}
+.share_form_phone .close{border-top:1px solid rgba(255,255,255,0.2);top:auto;bottom:0;left:0;position:absolute;cursor:pointer;width:100%;height:40px;line-height:40px;text-align:center;vertical-align:middle;font-size:15px;}
+.share_form_phone.rightToLeft .close{top:auto;left:0;}
+.share_form_phone .stage{position:absolute;top:60px;left:10px;right:10px;bottom:60px;margin:auto;width:auto;}
+.share_form_phone .back{z-index:100;position:absolute;top: 0;left: 10px;height: 40px;line-height: 40px;vertical-align: middle;}
+.share_form_phone .back span{font-family:"Arial";font-size:12px;margin-left: 10px;}
+.share_form_phone .back img{vertical-align: middle;}
+.share_form_phone .qrcode{position:absolute;top: 54px;left: 0;right: 0;bottom: 54px;margin:auto;text-align:center;}
+.share_form_phone .qrcode .checked{background:rgba(255,255,255,0.2);}
+.share_form_phone .qrcode .QRcode>canvas{border:5px solid #fff;}
+.share_form_phone .qrcode>div{display: none;}
+.share_form_phone .qrcode>div.showQR{display: block;}
+.share_form_phone .qrcode .title{position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;}
+
+.share_form_phone .qrcode img{width: 100px;height: 100px;padding: 5px; background: #fff;}
+.share_form_phone .qrcode span{cursor:pointer;font-size:15px;margin-top:15px;text-align:center;vertical-align:middle;width:150px;height:40px;line-height:40px;border-radius:20px;display:inline-block;background:rgba(255,255,255,0);border:1px solid #333333;}
+.share_form_phone .item{padding:0;vertical-align:middle;font-size:12px;position:relative;display: inline-block;width: 20%;margin-bottom: 15px;margin-left:4%;text-align: center;}
+.share_form_phone .qrcode.two span{width:95px;}
+.share_form_phone .qrcode.two .left{border-radius:20px 0 0 20px;}
+.share_form_phone .qrcode.two .right{border-radius:0 20px 20px 0;}
+
+.share_form_phone .item .logo{width:40px;height:40px;margin:0 auto;display:block;float: none;}
+.share_form_phone .item .logo_title{line-height: 30px;font-size:12px;}
+.share_form_phone .item .logo div{width:40px;height:40px;}
+
+
+/* download_form_phone */
+.download_form_phone{text-align:left;vertical-align:middle;line-height:20px;width:430px;position:absolute;left:0;top:0;z-index:1000;background:#000000;padding:10px;color:#ffffff;font-size:12px;font-family:Calibri;}
+.download_form_phone .content{position:relative;padding:10px;}
+.download_form_phone .item{border:1px solid rgba(255,255,255,0.25);padding: 0 15px;height:64px;line-height:64px;font-size:16px;}
+.download_form_phone .item.middle{margin:10px 0;}
+.download_form_phone .item img{float: left;display: inline-block;width: 32px;height: 32px;margin: 16px 0;}
+.download_form_phone .item span{margin: 0 10px;font-weight: bold;}
+.download_form_phone .item a{border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.25);text-decoration:none;cursor: pointer; float: right;padding: 0px 5px;width: 90px;height: 30px;margin: 16px 0;line-height: 30px;text-align: center;border: 1px solid #333;}
+.download_form_phone .item a:hover{opacity: 0.7;}
+.download_form_phone .item select{outline: none;font-size:14px;padding: 6px;width: 222px;margin: 0 10px;height: 32px;}
+.download_form_phone .item select option{padding:5px 0;}
+
+.download_form_phone.rightToLeft{text-align:right;}
+.download_form_phone.rightToLeft .item img{float:right;}
+.download_form_phone.rightToLeft .item a{float:left;}
+.download_form_phone .downloadButton{margin:20px 0;width:auto;}
+
+.download_form_phone{background:transparent;width:100%;padding:0;}
+.download_form_phone{border-radius:0;}
+.download_form_phone .content{padding:0 15px;padding-top:0;border-radius:0;}
+.download_form_phone .item{border-radius:0;padding: 0 16px 0 13px;overflow: hidden;text-align: right;height: auto;line-height: 64px;}
+.download_form_phone .item span{margin:0;}
+.download_form_phone .item a{margin: 0 0 16px; width: 94%;border-radius: 0;}
+.download_form_phone .item select{width:82%;margin:0;border-radius: 0;}
+.download_form_phone.rightToLeft .item{text-align:left;padding:0px 15px 0 15px;border-radius:0;}
+
+/* thumbnail_form_phone */
+
+/* setting_form_phone */
+.setting_form_phone{right:auto;}
+.setting_form_phone{width:100%;height:100%;left:0;vertical-align:middle;font-family:Arial,Tahoma;background:transparent;z-index:1;}
+.setting_form_phone .stage{margin:0;width:100%;height:100%;}
+.setting_form_phone .scrollBox{position:absolute;width:100%;}
+.setting_form_phone .scrollBox .item{position:relative;width:100%;height:50px;border-bottom:1px solid rgba(255,255,255,0.2);cursor:pointer;}
+.setting_form_phone .scrollBox .item img{position:absolute;cursor:pointer;width:25px;height:25px;top:13px;right:18px;}
+.setting_form_phone .scrollBox .item .title{line-height:50px;font-size:15px;padding:0 18px;text-align:left;}
+.setting_form_phone.rightToLeft .item .title{text-align:right;}
+.setting_form_phone.rightToLeft .item img{right:auto;left:18px;}
+
+/* language_form_phone */
+.language_form_phone{width:100%;height:100%;left:0;vertical-align:middle;font-family:Arial,Tahoma;background:transparent;z-index:1;}
+.language_form_phone .stage{margin:0;width:100%;height:100%;}
+.language_form_phone .scrollBox{position:relative;width:100%;top:0;transform:none;-webkit-transform:none;-o-transform:none;-ms-transform:none;-moz-transform:none;}
+.language_form_phone .scrollBox .item{position:relative;width:100%;height:50px;margin:0;border-bottom:1px solid rgba(255,255,255,0.2);cursor:pointer;}
+.language_form_phone .scrollBox .item img{display:none;position:absolute;cursor:pointer;width:25px;height:25px;top:13px;right:15px;}
+.language_form_phone .scrollBox .item .title{line-height:50px;font-size:15px;text-align:left;padding:0;width:100%;margin-left:0;left:0;}
+.language_form_phone .scrollBox .item.focus .title{border:none;}
+.language_form_phone .scrollBox .item.focus img{display:block;}
+
+/* copy_form */
+.copy_form{font-family:Arial;border-radius:5px;overflow:hidden;position:absolute;top:0;bottom:0;left:0;right:0;width:80%;height:170px;padding:10px;margin:auto;vertical-align: middle;color:#ffffff;}
+.copy_form textarea{vertical-align:top;top:0;left:0;border-radius:5px;height:130px;width:100%;background:#ffffff;font-size:15px;color:#000000;padding:0;margin:0;border:none;}
+.copy_form p{position:absolute;top:152px;margin-right:100px;line-height:15px;font-size:15px;text-align:left;}
+.copy_form .cancel{cursor:pointer;border-radius:2px;position:absolute;right:10px;top:150px;height:27px;line-height:27px;background-color:rgba(255,255,255,0.2);font-size:15px;vertical-align:middle;padding:0 15px;}
+
+/* tel_form */
+.tel_form{font-family:Arial;border-radius:5px;overflow:hidden;position:absolute;top:0;bottom:0;left:0;right:0;width:85%;margin:auto;vertical-align: middle;color:#ffffff;}
+.tel_form .form_title{margin:auto;height:40px;width:100%;background:#000000;line-height:40px;}
+.tel_form .stage{overflow:hidden;width:100%;position:relative;background:rgba(0,0,0,0.8);}
+.tel_form .swiper{width:100%;position:relative;left:0;top:0;max-height:50%;}
+.tel_form .progress{width:15px;height:5px;position:absolute;bottom:0;right:4px;cursor:pointer;}
+.tel_form .progressBar{width:5px;height:5px;opacity:0.25;background:#ffffff;position:absolute;right:4px;top:0;cursor:pointer;border-radius:2px;}
+.tel_form .swiper .item{
+	position:relative;
+	font-size: 15px;
+	margin: 0 10px;
+	height: 70px;
+	line-height: 70px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.tel_form .swiper .item .number{
+    max-width: calc(100% - 120px);
+    float: left;
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tel_form .swiper .item a{
+    display: inline-block;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: 1px solid rgba(255,255,255,0.9);
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.doublepage_form{
+  font-family:Arial;
+  overflow:hidden;
+  width:80%;
+  margin:auto;
+  vertical-align: middle;
+  color:#575757;
+  background:#fff;
+}
+.doublepage_form .form_title{
+  margin:auto;
+  width:100%;
+  color:#393939;
+  font-size: 16px;
+  padding-top: 5px;
+}
+.doublepage_form .secondTitle{
+  overflow:hidden;
+  width:100%;
+  position:relative;
+  color:#353535;
+  font-size: 13px;
+  line-height: 22px;
+}
+.doublepage_form .itemList{
+  overflow:hidden;
+  width:100%;
+  position:relative;
+  color:#79797A;
+  font-size: 13px;
+}
+.doublepage_form .itemList .item{
+  line-height: 22px;
+}
+.doublepage_form .closeButton{
+  overflow:hidden;
+  width:100%;
+  height: 38px;
+  line-height: 38px;
+  position:relative;
+  color:#639FE7;
+  font-size: 14px;
+  border-top:1px solid #E8E0E0;
+  margin-top: 10px;
+}
+.doublepage_form img{
+  overflow:hidden;
+  width:100%;
+  display: block;
+}
+.doublepage_form .wordBox{
+  padding-top: 10px;
+  /* padding-bottom:15px; */
+}
+.videogallery_form_phone{text-align:left;vertical-align:middle;line-height:20px;position:absolute;z-index:1000;color:#ffffff;margin:auto;width:80%;background:#000000;padding:15px 20px 20px 20px;font-size:15px;font-family:Calibri;position:absolute;overflow:hidden; }
+.win10_border.videogallery_form_phone{
+  border-radius: unset;
+}
+.videogallery_form_phone .form_title{font-size:18px;line-height:20px;}
+.videogallery_form_phone .title{font-size:18px;line-height:20px;}
+.videogallery_form_phone .video{width:100%;height:180px;background:rgba(255,255,255,0.25);margin-top:15px;}
+.videogallery_form_phone .close {
+  top: 16px;
+  right: 20px;
+  padding: 3px;
+  position: absolute;
+  cursor: pointer;
+}
+.videogallery_form_phone .video_list{
+  width: 100%;
+  height: 120px;
+  margin-top: 6px;
+}
+.videogallery_form_phone .info{margin-top:5px;}
+.videogallery_form_phone .info .description{
+  width:100%;
+}
+.videogallery_form_phone .description{
+  opacity:0.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.videogallery_form_phone .stage{width:100%;position:relative;height: 100px;overflow: hidden;}
+.videogallery_form_phone .swiper{width: max-content;position: absolute;}
+
+.videogallery_form_phone .progress{width:15px;height:5px;position:absolute;bottom:-105px;right:-5px;}
+.videogallery_form_phone .progressBar{width:5px;height:5px;background:rgba(255,255,255,0.25);position:absolute;right:5px;top:0;cursor:pointer;border-radius:2px;}
+
+.videogallery_form_phone .item{
+    width: 80px;
+    padding-right: 10px;
+    min-height: 42px;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+}
+.videogallery_form_phone .item .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.videogallery_form_phone .item .thumbnail{
+  background-color: rgba(255,255,255,0.25);
+    width: 80px;
+    height: 50px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+}
+.videogallery_form_phone .item:hover {text-decoration:underline;}
+
+.videogallery_form_phone.rightToLeft{text-align:right;}
+.videogallery_form_phone.rightToLeft .video_list{left:15px;right:auto;}
+.videogallery_form_phone.rightToLeft .item{padding-right:61px;padding-left:0;margin-left:5px;}
+.videogallery_form_phone.rightToLeft .item .thumbnail{left:auto;right:0;}
+.videogallery_form_phone.rightToLeft .progress{left:-5px;right:auto;}
+
+/* .appear_win10{position:absolute;opacity:0;z-index:1001;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);text-align:center;vertical-align:middle;}
+.appear_win10 .main_dom{position:relative;display:inline-block;left:0;top:0;}
+.appear_win10:after{content:""; display:inline-block; height:100%;vertical-align:middle;}
+
+.button_hover:hover{opacity:0.7;filter:alpha(opacity=40);}
+.button_hover:active{opacity:0.2;filter:alpha(opacity=20);}
+
+.disable{opacity:0.2;filter:alpha(opacity=20);}
+.usable{opacity:1;filter:alpha(opacity=100);} */
