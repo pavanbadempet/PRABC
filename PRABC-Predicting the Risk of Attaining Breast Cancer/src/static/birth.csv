@@ -1,0 +1,7 @@
+age_first_birth,breast_cancer_history
+20-24,79501
+25-29,54449
+<20,51728
+>=30,60008
+Nulliparous,82748
+Unknown,152247

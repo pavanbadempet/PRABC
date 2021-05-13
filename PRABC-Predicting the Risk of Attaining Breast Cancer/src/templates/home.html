@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.button-link {
+    height:50px;
+    padding: 6px 30px;
+    background: #ff00aa;
+    color: #FFF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 8px;
+    border: solid 1px #ff00aa;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-link:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+
+.control-label{
+	font-weight:bold;
+}
+body{
+    background-color:#FF1493;
+}		
+h2{
+	color: #FFFFFF;
+}
+</style>
+    <!-- Starts image section -->
+    <div class="row justify-content-md-center mb-4">
+        <h2>Predicting the Risk of Attaining Breast Cancer</h2>
+    </div>
+    
+<div class="row">
+    <!-- Ends image section -->
+    
+    <!-- Starts form section -->
+    <div class="form-container">
+        <form class="form-horizontal" action = "/predict/" method="post">
+
+            <div class="form-group row">
+			<label class="control-label col-sm-4" for="age"> Age:</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="age" name="age" style="height:30px; width: 180px;color: black;border: 1px solid grey;"> 
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="height">Height (cm):</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="height" name="height" style="height:30px; width: 180px;color: black;border: 1px solid grey;">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="weight">Weight (kg):</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="weight" name="weight" style="height:30px; width: 180px;color: black;border: 1px solid grey;">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="relative">First Degree Relative with History of Breast Cancer:</label>
+              <div class="col-sm-4">
+			  <select id="relative" name="relative" style="height:30px; width: 180px;">
+			   <option value=1>Yes</option>
+    		   <option value=0>No</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="menarche">Age at Menarche:</label>
+              <div class="col-sm-4">
+			  <select id="menarche" name="menarche"  style="height:30px; width: 180px;">
+			   <option value=0>< 12</option>
+    		   <option value=1>12-13</option>
+			   <option value=2>>= 14</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="first_birth">Age at First Birth:</label>
+              <div class="col-sm-4">
+			  <select id="first_birth" name="first_birth"  style="height:30px; width: 180px;">
+			   <option value=0>< 20</option>
+    		   <option value=1>20-24</option>
+    		   <option value=2>25-29</option>
+			   <option value=3>>= 30</option>
+			   <option value=4>Nulliparous</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="menopause">Menopausal Status:</label>
+              <div class="col-sm-4">
+			  <select id="menopause" name="menopause" style="height:30px; width: 180px;">
+			   <option value=1>Pre-Menopausal</option>
+    		   <option value=2>Post-Menopausal</option>
+			   <option value=3>Surgical Menopause</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-4" for="biophx">Previous Breast Biopsy or Aspiration:</label>
+              <div class="col-sm-4">
+			  <select id="biophx" name="biophx"  style="height:30px; width: 180px;">
+			   <option value=1>Yes</option>
+    		   <option value=0>No</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+			  <label class="control-label col-sm-4" for="current_hrt">Use of Hormone Replacement Therapy:</label>
+              <div class="col-sm-4">
+			  <select id="current_hrt" name="current_hrt" style="height:30px; width: 180px;">
+			   <option value=1>Yes</option>
+    		   <option value=0>No</option>
+    		   <option value=9>Unknown</option>
+			  </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+            <label class="control-label col-sm-4" for="">&nbsp;</label>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary" style=" width: 180px; border:#e75480;color:white;background-color:#631644; ">Predict</button>
+              </div>
+            </div>
+
+          </form>
+        <!-- Ends form section -->
+    </div>
+    <div class="col-md-4">
+            <div class="cold">
+                <img src="{{url_for('static', filename='images/pink_ribbob.png')}}" width="350" height="350" class="" />
+</div>
+<br>
+<a class="button-link" href="https://drive.google.com/file/d/16pMI7PUUk8kQ1tvTthpOamZqDKCZMkmA/view?usp=sharing"target="_blank">Download the Application for Android</a>
+<br>
+<br>
+<a class="button-link" href="https://drive.google.com/drive/folders/1jD_Teb-Q4UIYSsu9Gb2d52QgdoyI7XVL?usp=sharing"target="_blank">Download for macOS</a>
+<br>
+<br>
+<a class="button-link" href="https://drive.google.com/file/d/1GJ8C0EGuod8kexmAzOu4jiabeTStKztF/view?usp=sharing"target="_blank">Download for Windows</a>
+</div>
+	<div>
+
+
+
+{% endblock %}

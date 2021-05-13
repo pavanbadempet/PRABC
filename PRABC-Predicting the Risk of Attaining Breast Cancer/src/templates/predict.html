@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+{% block content %}
+<html>
+<head>  
+</head>  
+<style>
+.prediction{
+  width:800px; 
+  /*border: 1px solid black;*/
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  color: #631644;
+  font-size: 40px;
+  font-family: arial;
+}
+.label {
+  stroke: #631644;
+  font-family: arial;
+}
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+	<div class ="prediction" align="center" padding= "20px"> The Risk of Developing Breast Cancer {{ prediction }} %</div>
+
+	<div>
+<div id="my_dataviz"></div>
+<div id="my_dataviz2"></div>
+	 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+	  <script>
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 90, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.append("text")
+    .attr("x", (width / 2))             
+    .attr("y", 0 - (margin.top / 2))
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px") 
+	.attr("font-family", "arial")
+    .style("text-decoration", "bold")  
+    .text("Number of Individuals with Cancer History")
+	.attr("class", "label")
+
+// Parse the Data
+//d3.csv("age.csv", function(data) {
+ d3.csv("/csv/age.csv", function(error, data){
+  // X axis
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(data.map(function(d) { return d.age_group_5_years; }))
+	//age_group_5_years,breast_cancer_history
+    .padding(0.2);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end")
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+			.domain([0, 75967])
+    		.range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+	var tip = d3.tip()
+  				.attr('class', 'd3-tip')
+  				.offset([-10, 0])
+  				.html(function(d) {
+    				return "<strong>Frequency:</strong> <span style='color:white'>" 
+											  +d.breast_cancer_history +    "</span>";
+  				 })
+	svg.call(tip);
+
+  // Bars
+  svg.selectAll("mybar")
+    .data(data)
+    .enter()
+    .append("rect")
+      .attr("x", function(d) { return x(d.age_group_5_years); })
+      .attr("y", function(d) { return y(d.breast_cancer_history); })
+      .attr("width", x.bandwidth())
+      .attr("height", function(d) { return height - y(d.breast_cancer_history); })
+      .attr("fill", "pink")
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+
+  // text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+         "translate(" + (width/2) + " ," + (height + margin.top + 40) + ")")
+      .style("text-anchor", "middle")
+	  .attr("font-family", "arial")
+      .text("Age Range")
+	  .attr("class", "label")
+
+  // Add the y Axis
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+	  .attr("font-family", "arial")
+      .text("Count")      
+	  .attr("class", "label")
+
+})
+var svg2 = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+svg2.append("text")
+    .attr("x", (width / 2))             
+    .attr("y", 0 - (margin.top / 2))
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px") 
+	.attr("font-family", "arial")
+    .style("text-decoration", "bold")  
+    .text("Number of Individuals with Cancer History")
+	.attr("class", "label")
+d3.csv("/csv/birth.csv", function(error, data){
+  // X axis
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+	.domain(["<20", "20-24", "25-29", ">=30", "Nulliparous", "Unknown"])
+    .padding(0.2);
+  svg2.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end")
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+			.domain([0,152247])
+    		.range([ height, 0]);
+  svg2.append("g")
+    .call(d3.axisLeft(y));
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Frequency:</strong> <span style='color:white'>" +d.breast_cancer_history +    
+								"</span>";
+  })
+svg.call(tip);
+
+  // Bars
+  svg2.selectAll("mybar")
+    .data(data)
+    .enter()
+    .append("rect")
+      .attr("x", function(d) { return x(d.age_first_birth); })
+      .attr("y", function(d) { return y(d.breast_cancer_history); })
+      .attr("width", x.bandwidth())
+      .attr("height", function(d) { return height - y(d.breast_cancer_history); })
+      .attr("fill", "pink")
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+
+  // text label for the x axis
+  svg2.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + (height + margin.top + 40) + ")")
+      .style("text-anchor", "middle")
+	  .attr("font-family", "arial")
+      .text("Age of First Birth")
+	.attr("class", "label")
+
+  // Add the y Axis
+  svg2.append("g")
+      .call(d3.axisLeft(y));
+
+  // text label for the y axis
+  svg2.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+	  .attr("font-family", "arial")
+      .text("Count")      
+	  .attr("class", "label")
+
+
+  
+
+})
+
+			  
+	  </script>
+
+</html>
+{% endblock %}
